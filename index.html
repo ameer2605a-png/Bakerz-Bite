@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakerz Bite | Where smiles are served daily.</title>
+  <meta name="description" content="Bakerz Bite - Artisanal bakery & café crafted with 100% real European butter, stone-ground unbleached flour, and fresh farm cream. Zero artificial preservatives. All prices in PKR.">
+  <meta name="theme-color" content="#3E2723">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="Bakerz Bite | Where smiles are served daily.">
+  <meta property="og:description" content="Artisanal bakes made with 100% real creamery butter, unbleached flour, and farm cream. Signature cakes, pastries, cookies, and café merchandise.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon SVG Data URI with Artisanal Baker Badge -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23FFFFFF' stroke='%233E2723' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='43' fill='none' stroke='%23FFB300' stroke-width='2' stroke-dasharray='3 3'/%3E%3Cpath d='M35 44 C30 38 34 26 42 24 C46 20 60 20 64 24 C72 26 76 38 71 44 Z' fill='%23FFFDD0' stroke='%233E2723' stroke-width='3'/%3E%3Cpath d='M43 47 C43 56 59 56 59 47 Z' fill='%23FFE0B2' stroke='%233E2723' stroke-width='2.5'/%3E%3Crect x='28' y='65' width='46' height='12' rx='3' fill='%23D32F2F' stroke='%233E2723' stroke-width='2'/%3E%3Ctext x='51' y='73.5' text-anchor='middle' font-size='6.5' font-weight='900' fill='%23FFFDD0' font-family='sans-serif'%3EBAKERZ%3C/text%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. BAKERY-THEMED ANIMATED PRELOADER SCREEN
+       ======================================================================== -->
+  <div id="preloader" class="preloader" role="status" aria-label="Loading Bakerz Bite Artisanal Bakery">
+    <div class="preloader-content">
+      <div class="preloader-whisk-wrapper">
+        <div class="whisk-bowl">
+          <div class="whisk-batter"></div>
+        </div>
+        <div class="whisk-tool">
+          <!-- Whisk SVG Illustration -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="2" x2="12" y2="9"></line>
+            <path d="M12 9 C8 11 7 17 9 20 C10.5 22 13.5 22 15 20 C17 17 16 11 12 9 Z"></path>
+            <path d="M12 9 C10 12 9.5 17 11 19.5"></path>
+            <path d="M12 9 C14 12 14.5 17 13 19.5"></path>
+          </svg>
+        </div>
+        <div class="preloader-cupcake-sparkle">✨</div>
+      </div>
+      <h2 class="preloader-title">Bakerz Bite</h2>
+      <p class="preloader-quote">"Whisking smiles daily with 100% real butter & unbleached flour..."</p>
+      <div class="preloader-progress">
+        <div class="preloader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. NAVIGATION BAR & TOP HEADER WITH NEW ARTISANAL BAKER BADGE LOGO
+       ======================================================================== -->
+  <header id="mainHeader" class="main-header">
+    <div class="container header-inner">
+      <!-- Brand Logo Left: Artisanal Baker Badge Design on Clean White Background -->
+      <a href="#home" class="brand-logo-link" aria-label="Bakerz Bite Home">
+        <!-- Real Bakerz Bite Logo from ./logo.png -->
+        <div class="brand-logo-img-wrap">
+          <img src="logo.png"
+               alt="Bakerz Bite Artisanal Bakery Logo"
+               class="brand-logo-img"
+               width="auto"
+               height="40"
+               loading="eager"
+               onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'logo-fallback-text\'>BB</span>';">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">Bakerz Bite</span>
+          <span class="brand-tagline">Where smiles are served daily</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links (All 7 Sections: Smooth Internal Scroll) -->
+      <nav id="mainNav" class="main-nav" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#offers" class="nav-link">Offers & Deals</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#merchandise" class="nav-link">Merchandise</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Top Right Controls: Visitor Counter, Theme Toggle, Basket Button -->
+      <div class="header-actions">
+        <!-- Live Visitor Counter Badge -->
+        <div class="visitor-counter-badge" title="Live Foodies browsing Bakerz Bite right now">
+          <span class="live-pulse-dot" aria-hidden="true"></span>
+          <span>Visits: <strong class="counter-num" id="visitorCountDisplay">14,892</strong></span>
+        </div>
+
+        <!-- Light / Dark Mode Toggle Button (Saves to localStorage) -->
+        <button type="button" id="themeToggle" class="icon-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Light/Dark Theme">
+          <span id="themeIcon">
+            <!-- Moon SVG -->
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Bold Red Order Now CTA -->
+        <a href="#menu" class="btn btn-primary btn-order-now" title="Start your fresh bakery order">
+          Order Now
+        </a>
+
+        <!-- Cart Drawer Toggle Button -->
+        <button type="button" id="cartToggleBtn" class="icon-btn cart-toggle-btn" aria-label="View Shopping Basket" title="View Treat Basket">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span id="cartCountBadge" class="badge-count" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button type="button" id="mobileMenuToggle" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. HERO SECTION (#home)
+       ======================================================================== -->
+  <section id="home" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="badge-star-icon">★</span> Handcrafted Daily • 100% Real Butter & Unbleached Flour
+        </div>
+        <h1 class="hero-title">
+          Where <span class="title-accent">smiles</span> are served daily.
+        </h1>
+        <p class="hero-subtitle">
+          Step into a sanctuary of pure artisanal indulgence. Baked before dawn with 82%+ butterfat European creamery butter, non-GMO stone-ground unbleached flour, farm cream, and zero chemical conditioners.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m4.6 13.4 3-3a6 6 0 0 1 8.8 0l3 3a4 4 0 1 1-5.7 5.6L12 17.3l-1.7 1.7a4 4 0 1 1-5.7-5.6z"/></svg>
+            Explore Our Menu
+          </a>
+          <a href="#offers" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="7" y1="16" x2="13" y2="16"/></svg>
+            Fresh Deals & Vouchers
+          </a>
+        </div>
+
+        <!-- Brand Ethos Quick Trust Strip -->
+        <div class="hero-ethos-strip">
+          <div class="ethos-item">
+            <span class="ethos-item-icon">🧈</span>
+            <div class="ethos-item-text">
+              <strong>100% Real Butter</strong>
+              <span>Zero margarine or palm fat</span>
+            </div>
+          </div>
+          <div class="ethos-item">
+            <span class="ethos-item-icon">🌾</span>
+            <div class="ethos-item-text">
+              <strong>Unbleached Flour</strong>
+              <span>Heritage stone-ground wheat</span>
+            </div>
+          </div>
+          <div class="ethos-item">
+            <span class="ethos-item-icon">🥛</span>
+            <div class="ethos-item-text">
+              <strong>Pure Farm Cream</strong>
+              <span>Pasture-raised fresh dairy</span>
+            </div>
+          </div>
+          <div class="ethos-item">
+            <span class="ethos-item-icon">🌿</span>
+            <div class="ethos-item-text">
+              <strong>0% Additives</strong>
+              <span>No chemical conditioners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Media with Floating Badges -->
+      <div class="hero-media-wrapper">
+        <div class="hero-main-card">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=80" alt="Flaky golden artisan French butter croissants baked fresh at Bakerz Bite" class="hero-main-img">
+        </div>
+        <!-- Floating Top Badge -->
+        <div class="hero-floating-card card-top">
+          <div class="card-icon-box">🥐</div>
+          <div class="card-info-box">
+            <h5>27 Micro-Layers</h5>
+            <p>72-Hour Cold Fermentation</p>
+          </div>
+        </div>
+        <!-- Floating Bottom Badge -->
+        <div class="hero-floating-card card-bottom">
+          <div class="card-icon-box">⭐</div>
+          <div class="card-info-box">
+            <h5>4.9 / 5.0 Rating</h5>
+            <p>From 400+ Verified Foodies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. BRAND ETHOS SHOWCASE SECTION
+       ======================================================================== -->
+  <section class="ethos-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Pure Bakery Standard</span>
+        <h2 class="section-title">Wholesome Baking, Honest Ingredients</h2>
+        <p class="section-subtitle">We believe treats should nourish the soul without ever compromising your body with cheap industrial substitutes.</p>
+      </div>
+
+      <div class="ethos-cards-grid">
+        <div class="ethos-card">
+          <div class="ethos-card-icon">🧈</div>
+          <h3 class="ethos-card-title">100% Real Butter</h3>
+          <p class="ethos-card-desc">Strictly churned sweet cream butter with 82%+ butterfat. Never hydrogenated fats, margarine, or palm oil.</p>
+        </div>
+
+        <div class="ethos-card">
+          <div class="ethos-card-icon">🌾</div>
+          <h3 class="ethos-card-title">Unbleached Flour</h3>
+          <p class="ethos-card-desc">Certified non-GMO, naturally aged heirloom wheat flour. Zero potassium bromate, zero chemical bleaching agents.</p>
+        </div>
+
+        <div class="ethos-card">
+          <div class="ethos-card-icon">🥛</div>
+          <h3 class="ethos-card-title">Fresh Farm Cream</h3>
+          <p class="ethos-card-desc">Wholesome dairy cream and cage-free eggs delivered each dawn from ethical, pasture-raised family dairy farms.</p>
+        </div>
+
+        <div class="ethos-card">
+          <div class="ethos-card-icon">🌿</div>
+          <h3 class="ethos-card-title">0% Artificial Additives</h3>
+          <p class="ethos-card-desc">No high-fructose corn syrups, artificial dye food colors, or synthetic dough conditioners. Pure simplicity in every bite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. PRODUCT CATALOG & FILTERS (#menu)
+       ======================================================================== -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fresh Daily Menu</span>
+        <h2 class="section-title">Artisan Bakes & Specialties</h2>
+        <p class="section-subtitle">Categorized sections: Signature Cakes, Artisan Pastries, Fresh Cookies, Rustic Pies, and Boutique Merch. All prices in Pakistani Rupees (Rs.).</p>
+      </div>
+
+      <!-- Category Filter Pills Bar (Cakes, Pastries, Cookies, Pies, Merch) -->
+      <div id="categoryFilters" class="category-filter-bar" role="tablist" aria-label="Bakery Categories">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Search, Dietary Filter & Sort Toolbar -->
+      <div class="catalog-search-toolbar">
+        <div class="search-box-wrap">
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <input type="text" id="productSearchInput" class="search-input" placeholder="Search cakes, croissants, ingredients (e.g. chocolate, butter, pecan)..." aria-label="Search bakery catalog">
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="toolbar-right">
+          <!-- Dietary Filters -->
+          <div class="dietary-pills-wrap">
+            <button type="button" class="dietary-filter-pill active" data-diet="all">All</button>
+            <button type="button" class="dietary-filter-pill" data-diet="nut-free">Nut-Free</button>
+            <button type="button" class="dietary-filter-pill" data-diet="vegetarian">Vegetarian</button>
+            <button type="button" class="dietary-filter-pill" data-diet="best-seller">Best Sellers</button>
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div class="sort-select-wrap">
+            <select id="productSortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured Bakes</option>
+              <option value="price-low">Price: Low to High (PKR)</option>
+              <option value="price-high">Price: High to Low (PKR)</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Alphabetical</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Count Bar -->
+      <div class="catalog-results-meta" style="margin-bottom: 20px; font-size: 0.88rem; color: var(--text-muted);">
+        <span id="productsResultCount">Showing daily bakes</span>
+      </div>
+
+      <!-- Products Grid (Rendered dynamically in PKR) -->
+      <div id="productsGrid" class="products-grid">
+        <!-- Rendered dynamically via scripts/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. OFFERS & DEALS SECTION (#offers)
+       ======================================================================== -->
+  <section id="offers" class="offers-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sweet Savings</span>
+        <h2 class="section-title">Special Offers & Daily Deals</h2>
+        <p class="section-subtitle">Take advantage of our morning combos, weekend cake vouchers, and first-order welcome treats in PKR.</p>
+      </div>
+
+      <div id="offersGridContainer" class="offers-grid">
+        <!-- Rendered dynamically via scripts/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. PHOTO GALLERY & LIGHTBOX SECTION (#gallery)
+       ======================================================================== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visual Story</span>
+        <h2 class="section-title">The Baker's Craft & Café Sanctuary</h2>
+        <p class="section-subtitle">A glimpse into our flour-dusted morning rituals, stone hearth deck ovens, and welcoming boutique ambiance.</p>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="gallery-filters">
+        <button type="button" class="gallery-filter-pill active" data-category="all">All Moments</button>
+        <button type="button" class="gallery-filter-pill" data-category="bakes">Fresh Bakes</button>
+        <button type="button" class="gallery-filter-pill" data-category="craft">Bakery Craft</button>
+        <button type="button" class="gallery-filter-pill" data-category="ambiance">Café Ambiance</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- Rendered dynamically via scripts/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. MERCHANDISE SECTION (#merchandise)
+       ======================================================================== -->
+  <section id="merchandise" class="menu-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Boutique Collection</span>
+        <h2 class="section-title">Bakerz Bite Branded Goods</h2>
+        <p class="section-subtitle">Bring our café warmth home: Artisan ceramic mugs, organic canvas totes, double-wall glasses, and hand-carved walnut trays.</p>
+      </div>
+
+      <div class="merchandise-banner">
+        <div class="merchandise-banner-text">
+          <span class="product-cat-tag" style="margin-bottom: 8px; display: inline-block;">Artisan Living Collection</span>
+          <h3 style="font-size: 2rem; margin-bottom: 14px;">Elevate Your Morning Ritual</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">Designed by our team for food and coffee lovers. Crafted sustainably with non-toxic stoneware clay, GOTS organic cotton, and FSC certified American walnut.</p>
+          <ul class="merch-highlights-list">
+            <li>☕ <strong>Artisan Matte Ceramic Mug</strong> — debossed insignia & heat-retaining ceramic (Rs. 1,650)</li>
+            <li>👜 <strong>Organic Cotton Tote Bag</strong> — with dedicated upright baguette sleeve (Rs. 1,950)</li>
+            <li>🧊 <strong>Double-Wall Iced Glass</strong> — zero table condensation with bamboo lid (Rs. 1,450)</li>
+            <li>🪵 <strong>Hand-Carved Walnut Tray</strong> — brushed antique brass handles & crumb catcher (Rs. 4,200)</li>
+          </ul>
+          <button type="button" class="btn btn-primary" id="viewMerchCategoryBtn">
+            View All Merchandise in Catalog
+          </button>
+        </div>
+        <div class="merchandise-banner-media">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80" alt="Bakerz Bite handcrafted ceramic mug and pastry tray" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
+
+      <!-- Direct Merchandise Product Grid -->
+      <h3 style="font-size: 1.6rem; margin-bottom: 24px; text-align: center;">Official Boutique Goods</h3>
+      <div id="merchandiseGrid" class="products-grid">
+        <!-- Rendered dynamically by scripts/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. ABOUT US SECTION (#about)
+       ======================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text-col">
+        <span class="section-tag">Our Backstory</span>
+        <h2 class="section-title">Baking Smiles Since Dawn</h2>
+        <p class="about-story-text">
+          Bakerz Bite was born out of a simple, uncompromising desire: to revive the authentic soul of slow baking. While modern commercial bakeries turned to hydrogenated fats, bleached flour powders, and chemical dough conditioners to cut costs, we chose the path of patience.
+        </p>
+        <p class="about-story-text">
+          Every croissant is laminated over three days using cultured European sweet cream butter. Every cake is sponge-baked with farm-fresh cream, unbleached heirloom wheat, and single-origin chocolates. When you take a bite, you taste pure nature.
+        </p>
+        <div class="baker-quote-box">
+          "When you bake with real butter and real heart, the smile comes naturally."
+        </div>
+        <div class="baker-signature">
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=200&q=80" alt="Master Baker Julian" class="baker-avatar">
+          <div class="baker-name-title">
+            <h5>Chef Julian Fontaine</h5>
+            <span>Founder & Master Boulanger</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-media-collage">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Scoring sourdough loaf at Bakerz Bite" class="about-collage-img">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Bakerz Bite warm café interior" class="about-collage-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. CUSTOMER FEEDBACK & STAR RATING SYSTEM
+       ======================================================================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Guest Experiences</span>
+        <h2 class="section-title">Loved by Our Community</h2>
+        <p class="section-subtitle">Real ratings and stories from our morning regulars and celebration cake lovers.</p>
+      </div>
+
+      <!-- Rating Summary Overview Banner -->
+      <div class="reviews-overview-box">
+        <div class="avg-score-display">
+          <div class="big-score" id="avgRatingScore">4.9</div>
+          <div class="stars-overall" id="starsOverallContainer">★★★★★</div>
+          <p id="totalReviewsCount" style="font-size: 0.88rem; color: var(--text-muted);">Based on authentic verified guest reviews</p>
+        </div>
+        <div style="max-width: 440px; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+          <strong>100% Honest Ingredients Guarantee:</strong>
+          <br>Every review represents genuine guests who visited our café or ordered for doorstep delivery. Have feedback for our master bakers? Submit your review below!
+        </div>
+      </div>
+
+      <!-- Reviews Grid Layout: List + Submission Form -->
+      <div class="reviews-grid-layout">
+        <!-- Live Reviews List -->
+        <div class="reviews-list-container" id="reviewsList">
+          <!-- Rendered dynamically via scripts/app.js -->
+        </div>
+
+        <!-- Interactive Review Submission Form -->
+        <div class="review-form-card">
+          <h4>Share Your Sweet Experience</h4>
+          <p>Rate your recent pastry, cake, or coffee experience at Bakerz Bite.</p>
+
+          <form id="feedbackForm">
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="starRatingPicker">Your Star Rating</label>
+              <div id="starRatingPicker" class="star-rating-picker" aria-label="Select rating">
+                <button type="button" class="star-btn active" data-value="1">★</button>
+                <button type="button" class="star-btn active" data-value="2">★</button>
+                <button type="button" class="star-btn active" data-value="3">★</button>
+                <button type="button" class="star-btn active" data-value="4">★</button>
+                <button type="button" class="star-btn active" data-value="5">★</button>
+                <span class="rating-score-label" id="ratingScoreValue">5 / 5 Stars</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="feedbackName">Your Full Name</label>
+              <input type="text" id="feedbackName" required placeholder="e.g. Ayesha Malik">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="feedbackProduct">What Treat Did You Enjoy?</label>
+              <select id="feedbackProduct">
+                <option value="Belgian Triple Chocolate Truffle Cake">Belgian Triple Chocolate Truffle Cake (Rs. 3,850)</option>
+                <option value="French Butter Croissant">Artisan French Butter Croissant (Rs. 450)</option>
+                <option value="Basque Burnt Caramel Cheesecake">Basque Burnt Caramel Cheesecake (Rs. 3,600)</option>
+                <option value="Valrhona Sea Salt Dark Choc Cookie">Valrhona Sea Salt Dark Choc Cookie (Rs. 380)</option>
+                <option value="Heirloom Dutch Apple Pie">Heirloom Dutch Spiced Apple Pie (Rs. 2,850)</option>
+                <option value="Artisan Matte Ceramic Mug">Bakerz Bite Ceramic Mug & Coffee (Rs. 1,650)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="feedbackText">Your Thoughts & Review</label>
+              <textarea id="feedbackText" rows="4" required placeholder="Tell us how the butter, aroma, or texture tasted..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Submit My Review ⭐
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. CONTACT US & LOCATION SECTION (#contact)
+       ======================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visit & Inquire</span>
+        <h2 class="section-title">Drop By Our Bakery or Say Hello</h2>
+        <p class="section-subtitle">We would love to welcome you in person or assist with custom wedding cakes, catering, and dietary questions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details & Map Mockup -->
+        <div class="contact-info-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 18px;">Flagship Boutique</h3>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-text">
+                <h5>Physical Address</h5>
+                <p>Plot 14-C, Artisan Commercial Zone, Gulberg III<br>Lahore, Punjab, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-text">
+                <h5>Phone Contact</h5>
+                <p><a href="tel:+924235782253">+92 (42) 3578-BAKE / +92 300 2253792</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-text">
+                <h5>Email Inquiries</h5>
+                <p><a href="mailto:hello@bakerzbite.com">hello@bakerzbite.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">🕒</div>
+              <div class="contact-info-text">
+                <h5>Boutique & Café Hours</h5>
+                <p>Mon – Fri: 7:00 AM – 10:00 PM<br>Sat – Sun: 7:30 AM – 11:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store Map Mockup -->
+          <div class="store-map-mockup">
+            <div class="map-overlay-badge">
+              <span>🟢 Open Now until 10:00 PM</span>
+              <a href="https://maps.google.com" target="_blank" rel="noopener" style="color: var(--brand-amber); text-decoration: underline;">Get Directions &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Order & Contact Form -->
+        <div class="contact-info-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Custom Cake & Catering Inquiry</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Send a message to our Master Baking Team. We reply within 24 hours.</p>
+
+          <div id="contactAlert" class="contact-alert"></div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contactName">Your Full Name</label>
+                <input type="text" id="contactName" required placeholder="Hamza Tariq">
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" required placeholder="hamza@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Mobile Phone (WhatsApp)</label>
+                <input type="tel" id="contactPhone" placeholder="0300-1234567">
+              </div>
+
+              <div class="form-group">
+                <label for="contactOccasion">Inquiry Nature</label>
+                <select id="contactOccasion">
+                  <option value="Custom Celebration Cake">Custom Celebration Cake</option>
+                  <option value="Wedding Tier Cake">Wedding Tier Cake</option>
+                  <option value="Corporate Catering">Corporate Catering / Breakfast</option>
+                  <option value="General Dietary Inquiry">General Dietary Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactDate">Target Event / Pickup Date</label>
+                <input type="date" id="contactDate">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactMessage">Details / Vision / Allergies</label>
+                <textarea id="contactMessage" rows="4" required placeholder="Describe flavors, guest count, design preferences, or specific dietary requests..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message to Master Baker ✉️
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       12. COMPACT & SLEEK FOOTER
+       ======================================================================== -->
+  <footer class="compact-footer">
+    <div class="container footer-compact-container">
+      <div class="footer-top-strip">
+        <!-- Logo & Tagline -->
+        <div class="footer-brand">
+          <!-- Real Bakerz Bite Logo - Footer Mini -->
+          <div class="brand-logo-img-wrap brand-logo-img-wrap--small">
+            <img src="logo.png"
+                 alt="Bakerz Bite Logo"
+                 class="brand-logo-img brand-logo-img--small"
+                 width="auto" height="38" loading="lazy">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; line-height: 1.1; margin-bottom: 2px;">Bakerz Bite</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Where smiles are served daily.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links: Site Map, Gallery, About Us, FAQ, Contact Us -->
+        <nav class="footer-quick-links" aria-label="Footer Quick Links">
+          <a href="#sitemap" class="footer-link trigger-sitemap-modal">Site Map</a>
+          <a href="#gallery" class="footer-link">Gallery</a>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#faq" class="footer-link trigger-faq-modal">FAQ</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
+        </nav>
+
+        <!-- Social Icons & WhatsApp Order Pill -->
+        <div class="footer-social-wrap">
+          <a href="https://wa.me/923002253792" target="_blank" rel="noopener" class="footer-whatsapp-pill" title="Chat & Order via WhatsApp">
+            <span>💬 WhatsApp Bakes</span>
+          </a>
+          <div class="footer-social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Instagram" title="Follow on Instagram">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook" title="Follow on Facebook">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="TikTok" title="Follow on TikTok">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-strip">
+        <span>&copy; 2026 Bakerz Bite Artisanal Bakery & Café. Crafted with 100% Real Butter & Unbleached Flour. All rights reserved.</span>
+        <span>Flagship Kitchen: Gulberg III, Lahore, Pakistan • All prices in PKR (Rs.)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       13. CONTINUOUS GEOLOCATION TICKER (FIXED BOTTOM BAR)
+       ======================================================================== -->
+  <aside class="geolocation-ticker-bar" aria-label="Live Geolocation and Fresh Bake Status">
+    <div class="ticker-left-badge">
+      <span class="live-pulse-dot" aria-hidden="true"></span>
+      <span id="liveDateTicker">Wed, Nov 4, 2026</span>
+      <span class="ticker-time" id="liveTimeTicker">12:00:00 PM</span>
+    </div>
+    <div class="ticker-marquee-wrapper">
+      <div class="ticker-marquee-track">
+        <span class="ticker-item" id="liveLocationTicker">
+          📍 Detecting your local bakery zone...
+        </span>
+        <span class="ticker-item">
+          🔥 <strong>OVEN DECK 1:</strong> Fresh French Butter Croissants (Rs. 450) just finished baking!
+        </span>
+        <span class="ticker-item">
+          🧈 <strong>ETHOS PROMISE:</strong> 100% Normandy Creamery Butter & Stone-Ground Flour in every batch.
+        </span>
+        <span class="ticker-item">
+          🏷️ <strong>ACTIVE PROMO:</strong> Use code <code>SMILE20</code> for 20% off all whole signature cakes.
+        </span>
+        <span class="ticker-item">
+          💳 <strong>LOCAL PAYMENTS:</strong> JazzCash, EasyPaisa & Credit Cards accepted in PKR.
+        </span>
+        <span class="ticker-item">
+          🚚 <strong>SPEEDY COURIER:</strong> Free delivery on all orders over Rs. 3,000.
+        </span>
+        <!-- Continuous Marquee Seamless Loop -->
+        <span class="ticker-item">
+          📍 Plot 14-C, Gulberg III, Lahore • Fresh batches baked hourly!
+        </span>
+        <span class="ticker-item">
+          🔥 <strong>OVEN DECK 1:</strong> Fresh French Butter Croissants (Rs. 450) just finished baking!
+        </span>
+        <span class="ticker-item">
+          🧈 <strong>ETHOS PROMISE:</strong> 100% Normandy Creamery Butter & Stone-Ground Flour in every batch.
+        </span>
+        <span class="ticker-item">
+          🏷️ <strong>ACTIVE PROMO:</strong> Use code <code>SMILE20</code> for 20% off all whole signature cakes.
+        </span>
+        <span class="ticker-item">
+          💳 <strong>LOCAL PAYMENTS:</strong> JazzCash, EasyPaisa & Credit Cards accepted in PKR.
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       14. INTEGRATED AI CHATBOT WIDGET (BITEBOT)
+       ======================================================================== -->
+  <div class="chatbot-container">
+    <!-- Floating Launcher Button -->
+    <button type="button" id="chatbotLauncher" class="chatbot-launcher" aria-label="Open Chef Bite AI Bakery Assistant" aria-expanded="false">
+      <span class="chatbot-pulse-ring"></span>
+      <!-- Chef Hat Icon -->
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a4 4 0 0 0-4 4c0 1.25.57 2.37 1.46 3.1A5.98 5.98 0 0 0 6 15v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1c0-2.5-1.54-4.66-3.46-5.9A4.01 4.01 0 0 0 16 6a4 4 0 0 0-4-4z"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="9" y1="18" x2="15" y2="18"/>
+      </svg>
+      <span id="chatbotBadge" class="chatbot-badge hidden">1</span>
+    </button>
+
+    <!-- Expandable Chat Window -->
+    <div id="chatbotWindow" class="chatbot-window" role="dialog" aria-modal="true" aria-label="Chef Bite Bakery Concierge">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="bot-avatar-circle">
+            👨‍🍳
+            <span class="avatar-status-dot" title="Online"></span>
+          </div>
+          <div class="chatbot-header-text">
+            <h4>Chef Bite</h4>
+            <div class="bot-status-row">
+              <span class="bot-status-dot"></span>
+              <span>Online • Bakery Concierge</span>
+            </div>
+          </div>
+        </div>
+        <div class="chatbot-header-actions">
+          <button type="button" id="clearChatBtn" class="chat-header-btn" title="Reset chat history" aria-label="Clear chat">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+          <button type="button" id="closeChatbotBtn" class="chat-header-btn" title="Minimize chat" aria-label="Close chat">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips (top of chat) -->
+      <div id="chatbotSuggestions" class="chatbot-suggestions">
+        <!-- Rendered by scripts/chatbot.js -->
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="chatbotMessages" class="chatbot-messages">
+        <!-- Rendered by scripts/chatbot.js -->
+      </div>
+
+      <!-- Input Form -->
+      <form id="chatbotForm" class="chatbot-input-bar">
+        <input type="text" id="chatbotInput" class="chat-text-input" placeholder="Ask Chef Bite about cakes, payments, allergens..." aria-label="Ask Chef Bite a question">
+        <button type="submit" class="chat-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       15. CART DRAWER (SLIDE-OUT BASKET IN PKR)
+       ======================================================================== -->
+  <div id="cartBackdrop" class="cart-backdrop"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Your Treat Basket">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <h3>Your Treat Basket</h3>
+      </div>
+      <button type="button" id="closeCartBtn" class="modal-close-btn" style="position: static;" aria-label="Close basket">&times;</button>
+    </div>
+
+    <div id="cartItemsList" class="cart-items-list">
+      <!-- Items dynamically populated in PKR -->
+    </div>
+
+    <div class="cart-footer">
+      <!-- Promo Voucher Input -->
+      <div class="cart-coupon-box">
+        <div class="coupon-input-group">
+          <input type="text" id="cartCouponInput" placeholder="Enter coupon (e.g. SMILE20)" aria-label="Discount coupon code">
+          <button type="button" id="applyCouponBtn" class="btn btn-outline btn-sm">Apply</button>
+        </div>
+        <span id="couponFeedback" class="coupon-feedback"></span>
+      </div>
+
+      <!-- Cost Breakdown in PKR -->
+      <div class="cart-summary-breakdown">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">Rs. 0</span>
+        </div>
+        <div class="cart-summary-row discount" id="cartDiscountRow" style="display: none;">
+          <span>Voucher Savings</span>
+          <span id="cartDiscount">-Rs. 0</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Estimated GST (5%)</span>
+          <span id="cartTax">Rs. 0</span>
+        </div>
+        <div class="cart-summary-row" id="cartDeliveryRow" style="display: none;">
+          <span>Courier Delivery</span>
+          <span id="cartDelivery">Rs. 250</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">Rs. 0</span>
+        </div>
+      </div>
+
+      <button type="button" id="proceedCheckoutBtn" class="btn btn-primary btn-block">
+        Proceed to Checkout / Pay (PKR)
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       16. PRODUCT DETAILS & PURE INGREDIENT MODAL
+       ======================================================================== -->
+  <div id="productDetailsModal" class="modal-wrapper" role="dialog" aria-modal="true" aria-label="Product Details and Ingredients">
+    <div id="productModalBackdrop" class="modal-backdrop"></div>
+    <div class="modal-window">
+      <button type="button" id="closeProductModalBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="modalProductContent">
+        <!-- Rendered dynamically by scripts/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       17. CHECKOUT & PAYMENT MODAL (Card, JazzCash / EasyPaisa, Apple Pay, COD)
+       ======================================================================== -->
+  <div id="checkoutModal" class="modal-wrapper" role="dialog" aria-modal="true" aria-label="Checkout & Payment Interface">
+    <div id="checkoutBackdrop" class="modal-backdrop"></div>
+    <div class="modal-window checkout-modal-window">
+      <button type="button" id="closeCheckoutBtn" class="modal-close-btn" aria-label="Close checkout">&times;</button>
+      <div class="checkout-header">
+        <span class="section-tag">Secure Bakery Checkout</span>
+        <h3>Complete Your Fresh Order</h3>
+        <p class="checkout-sub">Bakes are prepared with pure ingredients right before your pickup or dispatch. All amounts in Pakistani Rupees (PKR).</p>
+      </div>
+
+      <!-- Payment Method Selection Tabs: Card, JazzCash/EasyPaisa, Apple Pay, COD -->
+      <div class="payment-tabs-bar" role="tablist">
+        <button type="button" class="payment-tab-btn active" data-method="card" role="tab" aria-selected="true">
+          <span>💳 Credit / Debit Card</span>
+        </button>
+        <button type="button" class="payment-tab-btn" data-method="jazzcash" role="tab" aria-selected="false">
+          <span>📱 JazzCash / EasyPaisa</span>
+        </button>
+        <button type="button" class="payment-tab-btn" data-method="applepay" role="tab" aria-selected="false">
+          <span>🍎 Apple / Google Pay</span>
+        </button>
+        <button type="button" class="payment-tab-btn" data-method="cod" role="tab" aria-selected="false">
+          <span>💵 Cash on Delivery</span>
+        </button>
+      </div>
+
+      <!-- Order Summary Card -->
+      <div class="checkout-summary-box">
+        <h5 style="margin-bottom: 12px; font-size: 0.95rem;">Order Summary (PKR)</h5>
+        <div id="checkoutItemsSummary">
+          <!-- Populated dynamically in PKR -->
+        </div>
+      </div>
+
+      <!-- Checkout Form -->
+      <form id="checkoutForm">
+        <!-- Fulfillment Choice -->
+        <div class="fulfillment-options">
+          <label class="fulfillment-radio-label">
+            <input type="radio" name="fulfillmentType" value="pickup" checked>
+            <div>
+              <strong>🏬 Boutique In-Store Pickup</strong>
+              <div style="font-size: 0.74rem; color: var(--text-muted);">Gulberg III Flagship • Ready in 25 mins • Free</div>
+            </div>
+          </label>
+          <label class="fulfillment-radio-label">
+            <input type="radio" name="fulfillmentType" value="delivery">
+            <div>
+              <strong>🚚 Handcrafted Courier</strong>
+              <div style="font-size: 0.74rem; color: var(--text-muted);">Hot insulated bag • Rs. 250 (Free over Rs. 3,000)</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="checkoutName">Recipient Name</label>
+            <input type="text" id="checkoutName" required placeholder="Ayesha Malik">
+          </div>
+          <div class="form-group">
+            <label for="checkoutEmail">Email for Digital Receipt</label>
+            <input type="email" id="checkoutEmail" required placeholder="ayesha@example.com">
+          </div>
+          <div class="form-group">
+            <label for="checkoutPhone">Mobile Phone (WhatsApp)</label>
+            <input type="tel" id="checkoutPhone" required placeholder="0300-1234567">
+          </div>
+          <div class="form-group">
+            <label for="checkoutStreet">Delivery Address or Pickup Time</label>
+            <input type="text" id="checkoutStreet" placeholder="e.g. House 12, Street 4, Gulberg III, Lahore">
+          </div>
+        </div>
+
+        <!-- Panel 1: Credit / Debit Card Details -->
+        <div id="payment-panel-card" class="payment-panel active">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="ccNumber">Card Number (Visa / Mastercard / PayPak / UnionPay)</label>
+              <input type="text" id="ccNumber" placeholder="4532 •••• •••• 8892" maxlength="19" required>
+            </div>
+            <div class="form-group">
+              <label for="ccExp">Expiry Date (MM/YY)</label>
+              <input type="text" id="ccExp" placeholder="08/28" maxlength="5" required>
+            </div>
+            <div class="form-group">
+              <label for="ccCvc">Security CVC</label>
+              <input type="password" id="ccCvc" placeholder="892" maxlength="4" required>
+            </div>
+          </div>
+          <button type="submit" id="placeOrderSubmitBtn" class="btn btn-primary btn-block">
+            Complete Order & Pay Now (<span id="checkoutTotalAmount">Rs. 0</span>)
+          </button>
+        </div>
+
+        <!-- Panel 2: JazzCash & EasyPaisa (PKR Local Mobile Wallets) -->
+        <div id="payment-panel-jazzcash" class="payment-panel">
+          <div class="local-wallet-wrapper">
+            <!-- Wallet Selector Pills -->
+            <div class="wallet-toggle-bar">
+              <button type="button" class="wallet-toggle-pill active" data-wallet="jazzcash">
+                <span class="wallet-pill-icon jc-icon">JC</span> JazzCash
+              </button>
+              <button type="button" class="wallet-toggle-pill" data-wallet="easypaisa">
+                <span class="wallet-pill-icon ep-icon">EP</span> EasyPaisa
+              </button>
+            </div>
+
+            <!-- JazzCash View -->
+            <div id="wallet-view-jazzcash" class="wallet-view-content">
+              <div class="wallet-banner-info jc-banner">
+                <strong>⚡ Instant JazzCash Mobile Wallet Payment</strong>
+                <p>Enter your registered JazzCash mobile account number. An MPIN prompt will appear on your phone.</p>
+              </div>
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label for="jcMobileNumber">JazzCash Mobile Account Number</label>
+                <input type="tel" id="jcMobileNumber" placeholder="0300 1234567" maxlength="12">
+              </div>
+              <div class="form-group" style="margin-bottom: 18px;">
+                <label for="jcCnic">CNIC (Last 6 Digits for security)</label>
+                <input type="password" id="jcCnic" placeholder="••••••" maxlength="6">
+              </div>
+              <button type="button" id="mockJazzcashBtn" class="btn btn-block btn-jazzcash">
+                Confirm & Pay with JazzCash
+              </button>
+            </div>
+
+            <!-- EasyPaisa View -->
+            <div id="wallet-view-easypaisa" class="wallet-view-content" style="display: none;">
+              <div class="wallet-banner-info ep-banner">
+                <strong>🟢 Instant EasyPaisa Mobile Wallet Payment</strong>
+                <p>Enter your EasyPaisa registered mobile number to authorize payment securely.</p>
+              </div>
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label for="epMobileNumber">EasyPaisa Mobile Account Number</label>
+                <input type="tel" id="epMobileNumber" placeholder="0345 1234567" maxlength="12">
+              </div>
+              <div class="form-group" style="margin-bottom: 18px;">
+                <label for="epAccountTitle">Account Holder Name</label>
+                <input type="text" id="epAccountTitle" placeholder="e.g. Hamza Tariq">
+              </div>
+              <button type="button" id="mockEasypaisaBtn" class="btn btn-block btn-easypaisa">
+                Confirm & Pay with EasyPaisa
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Apple Pay / Google Pay Mock -->
+        <div id="payment-panel-applepay" class="payment-panel">
+          <div style="text-align: center; padding: 24px; background: var(--bg-primary); border-radius: var(--radius-sm); margin-bottom: 20px;">
+            <p style="margin-bottom: 14px; font-size: 0.92rem;">Authorize your bakery purchase safely with Face ID / Touch ID / Device Wallet.</p>
+            <button type="button" id="mockApplePayBtn" class="btn btn-block" style="background: #000; color: #FFF; font-weight: 700;">
+              🍎 Pay with Apple Pay / GPay
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 4: Cash on Delivery (COD) -->
+        <div id="payment-panel-cod" class="payment-panel">
+          <div style="text-align: center; padding: 24px; background: var(--bg-primary); border-radius: var(--radius-sm); margin-bottom: 20px;">
+            <p style="margin-bottom: 14px; font-size: 0.92rem;">Pay our delivery rider in cash when your fresh bakes arrive at your doorstep. Please keep the exact amount ready.</p>
+            <button type="button" id="mockCodBtn" class="btn btn-block btn-primary">
+              Confirm Order — Pay Cash on Delivery
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       18. ORDER CONFIRMATION & RECEIPT MODAL
+       ======================================================================== -->
+  <div id="orderSuccessModal" class="modal-wrapper" role="dialog" aria-modal="true" aria-label="Order Confirmation Receipt">
+    <div class="modal-backdrop"></div>
+    <div class="modal-window checkout-modal-window">
+      <div id="orderReceiptDetails" class="order-receipt-content">
+        <!-- Rendered by processOrderSubmission in PKR -->
+      </div>
+      <button type="button" id="closeSuccessBtn" class="btn btn-primary btn-block" style="margin-top: 20px;">
+        Close & Continue Browsing Bakes
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       19. FAQ MODAL (QUICK FOOTER LINK)
+       ======================================================================== -->
+  <div id="faqModal" class="modal-wrapper" role="dialog" aria-modal="true" aria-label="Frequently Asked Questions">
+    <div id="faqBackdrop" class="modal-backdrop"></div>
+    <div class="modal-window">
+      <button type="button" id="closeFaqBtn" class="modal-close-btn" aria-label="Close FAQ">&times;</button>
+      <div class="checkout-header">
+        <span class="section-tag">Knowledge Base</span>
+        <h3>Frequently Asked Questions</h3>
+        <p class="checkout-sub">Learn about our 100% real butter standard, unbleached flour, PKR payment methods, and delivery.</p>
+      </div>
+      <div id="faqContent" style="margin-top: 20px;">
+        <!-- Populated dynamically via scripts/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       20. SITE MAP MODAL (QUICK FOOTER LINK)
+       ======================================================================== -->
+  <div id="sitemapModal" class="modal-wrapper" role="dialog" aria-modal="true" aria-label="Bakerz Bite Site Map">
+    <div id="sitemapBackdrop" class="modal-backdrop"></div>
+    <div class="modal-window">
+      <button type="button" id="closeSitemapBtn" class="modal-close-btn" aria-label="Close Site Map">&times;</button>
+      <div class="checkout-header">
+        <span class="section-tag">Quick Navigation</span>
+        <h3>Bakerz Bite Site Map Directory</h3>
+        <p class="checkout-sub">Direct access to every page section, product catalog, and features.</p>
+      </div>
+      <div class="sitemap-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div class="sitemap-card" style="padding: 16px; background: var(--bg-surface); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+          <h4 style="font-size: 1.1rem; color: var(--brand-cocoa); margin-bottom: 8px;">Main Sections</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem;">
+            <li><a href="#home" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#home — Hero & Ethos</a></li>
+            <li><a href="#menu" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#menu — Fresh Daily Menu</a></li>
+            <li><a href="#offers" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#offers — Deals & Vouchers</a></li>
+            <li><a href="#gallery" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#gallery — Photo Lightbox</a></li>
+            <li><a href="#merchandise" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#merchandise — Branded Goods</a></li>
+            <li><a href="#about" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#about — Our Backstory</a></li>
+            <li><a href="#contact" onclick="document.getElementById('sitemapModal').classList.remove('active'); document.body.style.overflow='';" style="color: var(--brand-amber); font-weight: 600;">#contact — Boutique & Inquiries</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-card" style="padding: 16px; background: var(--bg-surface); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+          <h4 style="font-size: 1.1rem; color: var(--brand-cocoa); margin-bottom: 8px;">Features & Ordering</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem;">
+            <li>🧈 100% Real Butter & Unbleached Flour</li>
+            <li>📱 JazzCash & EasyPaisa PKR Payments</li>
+            <li>💳 Credit/Debit Card & Apple Pay</li>
+            <li>👨‍🍳 BiteBot AI Bakery Concierge</li>
+            <li>🕒 Live Geolocation Ticker & Clock</li>
+            <li>⭐ Verified Reviews & Star Rating Form</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       21. PHOTO GALLERY LIGHTBOX MODAL
+       ======================================================================== -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Lightbox Preview">
+    <div class="lightbox-content-box">
+      <button type="button" id="lightboxClose" class="lightbox-close-btn" aria-label="Close image preview">&times;</button>
+      <button type="button" id="lightboxPrev" class="lightbox-nav-btn prev" aria-label="Previous photo">&#10094;</button>
+      <button type="button" id="lightboxNext" class="lightbox-nav-btn next" aria-label="Next photo">&#10095;</button>
+
+      <div class="lightbox-image-wrap">
+        <img id="lightboxImage" src="" alt="Full preview of bakery photo">
+      </div>
+      <div id="lightboxCaption" class="lightbox-caption-bar"></div>
+      <span id="lightboxCounter" class="lightbox-counter-badge">1 / 8</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       22. TOAST NOTIFICATION CONTAINER
+       ======================================================================== -->
+  <div id="toastContainer" class="bakerz-toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       23. SCRIPTS
+       ======================================================================== -->
+  <script src="scripts/data.js"></script>
+  <script src="scripts/chatbot.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
